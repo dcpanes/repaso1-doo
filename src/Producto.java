@@ -12,4 +12,16 @@ public class Producto {
         this.nombre = nombre;
         this.precio = precio;
     }
+
+    public String obtieneId(){
+        return this.id;
+    }
+
+    public String obtieneNombre(){
+        return this.nombre;
+    }
+
+    public Double obtienePrecio(){
+        return this.precio;
+    }
 }
