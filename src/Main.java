@@ -2,10 +2,21 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 void main() {
 
-    Producto producto1 = new Producto("1", "iphone", 100.0);
+    Catalogo catalogo = new Catalogo();
 
-    System.out.println("Id: " + producto1.obtieneId());
-    System.out.println("Nombre: " + producto1.obtieneNombre());
-    System.out.println("Precio: " + producto1.obtienePrecio());
+    Producto producto1 = new Producto("1", "iphone", 100.0);
+    Producto producto2 = new Producto("2", "samsung", 200.0);
+    Producto producto3 = new Producto("3", "xiaomi", 300.0);
+
+    catalogo.agregarProducto(producto1);
+    catalogo.agregarProducto(producto3);
+
+    for (Producto p : catalogo.obtenerProductos()){
+        System.out.println(
+                " Id :" + p.obtieneId() +
+                " Nombre :" + p.obtieneNombre() +
+                " Precio :" + p.obtienePrecio()
+        );
+    }
 
 }
