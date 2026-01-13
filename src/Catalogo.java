@@ -13,4 +13,19 @@ public class Catalogo {
         return productos;
     }
 
+    public Boolean productoDisponible(String id){
+        if(id.equals("")){
+            return false;
+        }
+        Boolean existe = false;
+        for (Producto p :  obtenerProductos()){
+            if(p.obtieneId().equals(id)){
+                existe = true;
+                break;
+            }
+        }
+        return existe;
+    }
+
+
 }
